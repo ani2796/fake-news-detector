@@ -1,0 +1,13 @@
+Data exploration:
+- Find patterns
+- Record statistical information
+- Try different exploratory techniques
+
+Data preprocessing:
+- Try techniques used in asmt1
+- Sentiment analysis
+- Read some literature to find other useful techniques
+
+Predictive models:
+- RNNs are potentially useful: https://ijoseff.github.io/Fake-News-Detection/
+- Used in the original paper - GD, SVM, LSVM, LR, KNN, and DT: https://onlinelibrary.wiley.com/doi/full/10.1002/spy2.9
