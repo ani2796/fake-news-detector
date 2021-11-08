@@ -1,3 +1,5 @@
 **/.DS_Store
 /datasets/ISOT/Fake.csv
 /datasets/ISOT/True.csv
+/datasets/ISOT/combined.csv
+
