@@ -39,7 +39,7 @@ def get_bs(session, url):
     r = None
     while True:
         r = session.get(url)
-        time.sleep(3)
+        time.sleep(1)
         if r.ok:
             break
     return BeautifulSoup(r.text, 'lxml')
@@ -53,7 +53,6 @@ def scrape_post(session, base_url, post_id):
     final_url = base_url + post_url
 
     post_bs = get_bs(session, final_url)
-    time.sleep(2)
 
     for link in post_bs.find_all('a'):
             url = link.get('href')
@@ -112,7 +111,10 @@ if __name__ == "__main__":
 
     print(str(facebook_data.head()))
 
-    for i in range(len(facebook_data.index)):
+    row_count = len(facebook_data.index)
+    print("Row count: " + str(row_count))
+
+    for i in range(row_count):
         post_info = facebook_data.iloc[i]
         post_id = post_info['id']
         post_url = post_info['url']
@@ -138,4 +140,3 @@ if __name__ == "__main__":
         print("\n")
     
     facebook_data.to_csv("extracted_data.csv")
-            
